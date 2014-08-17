@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="8.509" errors="2" skipped="0" tests="2" name="concurrent.lock.RedissonLockTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="c:\Program Files\Java\jdk1.7.0_21\jre\bin"/>
+    <property name="java.vm.version" value="23.21-b01"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="d:\workplace\VNDS\lock"/>
+    <property name="java.runtime.version" value="1.7.0_21-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="c:\Program Files\Java\jdk1.7.0_21\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\CHAU~1.HOA\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="d:/Program/apache-maven-3.0.5/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="c:\Program Files\Java\jdk1.7.0_21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\chau.hoang\bin;.;C:\Program Files (x86)\Git\local\bin;C:\Program Files (x86)\Git\mingw\bin;C:\Program Files (x86)\Git\bin;c:\Program Files (x86)\Haskell\bin;c:\Program Files (x86)\Haskell Platform\2013.2.0.0\lib\extralibs\bin;c:\Program Files (x86)\Haskell Platform\2013.2.0.0\bin;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;c:\Program Files (x86)\AMD APP\bin\x86_64;c:\Program Files (x86)\AMD APP\bin\x86;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\TortoiseSVN\bin;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;c:\Program Files\Intel\Intel(R) Management Engine Components\DAL;c:\Program Files\Intel\Intel(R) Management Engine Components\IPT;c:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;c:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Git\cmd;c:\Program Files\TortoiseGit\bin;c:\Windows\System32;c:\Program Files\Perforce;c:\Program Files\nodejs\;c:\Python33\Scripts\;c:\Program Files\Mercurial\;c:\Program Files\Java\jdk1.7.0_21\bin;c:\Program Files (x86)\Haskell Platform\2013.2.0.0\mingw\bin;c:\Program Files (x86)\Calibre2\;c:\Python27\Scripts\;c:\Program Files (x86)\scala\bin;c:\Python33\Scripts;c:\Users\chau.hoang\AppData\Roaming\cabal\bin;c:\Python27;c:\Users\chau.hoang\AppData\Roaming\npm;c:\Python27\Scripts\;d:\Program\phantomjs\;c:\cygnus\cygwin-b20\H-i586-cygwin32\bin\;d:\Program\apache-maven-3.0.5\bin;d:\Program\jboss-fuse-full-6.0.0.redhat-024\jboss-fuse-6.0.0.redhat-024\bin;c:\Program Files (x86)\Nmap;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\chau.hoang"/>
+    <property name="user.timezone" value="Asia/Bangkok"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="chau.hoang"/>
+    <property name="java.class.path" value="d:/Program/apache-maven-3.0.5/boot/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="c:\Program Files\Java\jdk1.7.0_21\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_21"/>
+    <property name="java.ext.dirs" value="c:\Program Files\Java\jdk1.7.0_21\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="c:\Program Files\Java\jdk1.7.0_21\jre\lib\resources.jar;c:\Program Files\Java\jdk1.7.0_21\jre\lib\rt.jar;c:\Program Files\Java\jdk1.7.0_21\jre\lib\sunrsasign.jar;c:\Program Files\Java\jdk1.7.0_21\jre\lib\jsse.jar;c:\Program Files\Java\jdk1.7.0_21\jre\lib\jce.jar;c:\Program Files\Java\jdk1.7.0_21\jre\lib\charsets.jar;c:\Program Files\Java\jdk1.7.0_21\jre\lib\jfr.jar;c:\Program Files\Java\jdk1.7.0_21\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="d:\Program\apache-maven-3.0.5"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="7.474" classname="concurrent.lock.RedissonLockTest" name="testSanity">
+    <error message="Unable to connect" type="com.lambdaworks.redis.RedisException">com.lambdaworks.redis.RedisException: Unable to connect
+	at com.lambdaworks.redis.RedisClient.connect(RedisClient.java:188)
+	at com.lambdaworks.redis.RedisClient.connectPubSub(RedisClient.java:165)
+	at org.redisson.connection.ConnectionManager.subscribe(ConnectionManager.java:136)
+	at org.redisson.RedissonLock.subscribe(RedissonLock.java:146)
+	at org.redisson.Redisson.getLock(Redisson.java:154)
+	at concurrent.lock.RedissonLockTest.testSanity(RedissonLockTest.java:13)
+Caused by: java.net.ConnectException: Connection refused: no further information: /127.0.0.1:6379
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:191)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:241)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:502)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:452)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:346)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:101)
+	at java.lang.Thread.run(Thread.java:722)
+</error>
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+</system-err>
+  </testcase>
+  <testcase time="1.035" classname="concurrent.lock.RedissonLockTest" name="testUnlock">
+    <error message="Unable to connect" type="com.lambdaworks.redis.RedisException">com.lambdaworks.redis.RedisException: Unable to connect
+	at com.lambdaworks.redis.RedisClient.connect(RedisClient.java:188)
+	at com.lambdaworks.redis.RedisClient.connectPubSub(RedisClient.java:165)
+	at org.redisson.connection.ConnectionManager.subscribe(ConnectionManager.java:136)
+	at org.redisson.RedissonLock.subscribe(RedissonLock.java:146)
+	at org.redisson.Redisson.getLock(Redisson.java:154)
+	at concurrent.lock.RedissonLockTest.testUnlock(RedissonLockTest.java:21)
+Caused by: java.net.ConnectException: Connection refused: no further information: /127.0.0.1:6379
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:191)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:241)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:502)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:452)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:346)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:101)
+	at java.lang.Thread.run(Thread.java:722)
+</error>
+  </testcase>
+</testsuite>
